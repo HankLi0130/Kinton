@@ -1,20 +1,11 @@
 package ca.hankli.kinton.ui.menu
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import ca.hankli.kinton.R
+import ca.hankli.kinton.ui.base.BaseFragment
 
-class MenuFragment : Fragment() {
+class MenuFragment : BaseFragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_menu, container, false)
-    }
+    override val layoutId: Int
+        get() = R.layout.fragment_menu
 
 }
