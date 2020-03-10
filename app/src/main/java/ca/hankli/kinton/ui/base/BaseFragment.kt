@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import ca.hankli.kinton.utils.NO_RESOURCE
+import ca.hankli.kinton.util.NO_RESOURCE
 
 open class BaseFragment : Fragment() {
 

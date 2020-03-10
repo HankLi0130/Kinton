@@ -1,7 +1,8 @@
-package ca.hankli.kinton
+package ca.hankli.kinton.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ca.hankli.kinton.R
 
 class MainActivity : AppCompatActivity() {
 

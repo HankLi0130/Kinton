@@ -1,4 +1,4 @@
-package ca.hankli.kinton.utils
+package ca.hankli.kinton.util
 
 const val EMPTY = ""
 const val ZERO = 0

@@ -1,2 +1,3 @@
 rootProject.name='Kinton'
 include ':app'
+include ':model'
