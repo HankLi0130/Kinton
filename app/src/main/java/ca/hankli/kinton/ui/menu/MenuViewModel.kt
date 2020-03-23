@@ -10,7 +10,7 @@ class MenuViewModel : ViewModel() {
     val items: List<MenuItem> = listOf(
         MenuItem(
             1,
-            R.drawable.ic_ramen,
+            R.drawable.pic_ramen_pork_original,
             "Pork Original",
             "sea salt, pork, seasoned egg, nori, scallions",
             BigDecimal("12.95")
