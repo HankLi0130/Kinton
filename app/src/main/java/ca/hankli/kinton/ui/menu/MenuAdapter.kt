@@ -17,8 +17,8 @@ class MenuAdapter : RecyclerView.Adapter<MenuViewHolder>() {
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_menu_style_1, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_menu_style_1, parent, false)
         return MenuViewHolder(view)
     }
 

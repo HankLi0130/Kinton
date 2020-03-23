@@ -35,6 +35,90 @@ class MenuViewModel : ViewModel() {
             "Pork Original",
             "sea salt, pork, seasoned egg, nori, scallions",
             BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
+        ),
+        MenuItem(
+            1,
+            R.drawable.ic_ramen,
+            "Pork Original",
+            "sea salt, pork, seasoned egg, nori, scallions",
+            BigDecimal("12.95")
         )
     )
 }
