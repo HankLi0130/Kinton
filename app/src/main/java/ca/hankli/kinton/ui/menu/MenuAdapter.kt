@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.hankli.kinton.R
-import ca.hankli.model.MenuItem
+import ca.hankli.kinton.model.MenuItem
 import kotlinx.android.synthetic.main.item_menu_style_1.view.*
 
 class MenuAdapter : RecyclerView.Adapter<MenuViewHolder>() {
