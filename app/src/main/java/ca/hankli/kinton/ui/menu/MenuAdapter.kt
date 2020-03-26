@@ -5,31 +5,64 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.hankli.kinton.R
+import ca.hankli.kinton.model.MenuCategory
 import ca.hankli.kinton.model.MenuItem
-import kotlinx.android.synthetic.main.item_menu_style_1.view.*
+import ca.hankli.kinton.ui.adapter.SectionAdapter
+import kotlinx.android.synthetic.main.view_holder_label_1.view.*
+import kotlinx.android.synthetic.main.view_holder_row_1.view.*
+import kotlinx.android.synthetic.main.view_holder_row_1.view.icon
 
-class MenuAdapter : RecyclerView.Adapter<MenuViewHolder>() {
+class MenuAdapter : SectionAdapter<MenuCategoryViewHolder, MenuItemViewHolder>() {
 
-    var items: List<MenuItem> = emptyList()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    var categories: List<MenuCategory> = emptyList()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_menu_style_1, parent, false)
-        return MenuViewHolder(view)
+    var itemGroups: Map<Int, List<MenuItem>> = emptyMap()
+
+    override fun onCreateLabelViewHolder(parent: ViewGroup): MenuCategoryViewHolder {
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.view_holder_label_1, parent, false)
+        return MenuCategoryViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
-        holder.bind(items[position])
+    override fun onCreateRowViewHolder(parent: ViewGroup): MenuItemViewHolder {
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.view_holder_row_1, parent, false)
+        return MenuItemViewHolder(view)
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun onBindLabelViewHolder(holder: MenuCategoryViewHolder, labelPosition: Int) {
+        holder.bind(categories[labelPosition])
+    }
+
+    override fun onBindRowViewHolder(
+        holder: MenuItemViewHolder,
+        labelPosition: Int,
+        rowPosition: Int
+    ) {
+        val key = categories[labelPosition].type
+        val item = itemGroups.getValue(key)[rowPosition]
+        holder.bind(item)
+    }
+
+    override fun getLabelCount(): Int = categories.size
+
+    override fun getRowCountInSection(labelPosition: Int): Int {
+        val key = categories[labelPosition].type
+        return itemGroups.getValue(key).size
+    }
 }
 
-class MenuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class MenuCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+    fun bind(item: MenuCategory) {
+        itemView.apply {
+            icon.setImageResource(item.iconRes)
+            label.text = item.name
+        }
+    }
+}
+
+class MenuItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(item: MenuItem) {
         itemView.apply {

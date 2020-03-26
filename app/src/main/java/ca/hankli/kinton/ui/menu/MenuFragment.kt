@@ -22,6 +22,10 @@ class MenuFragment : BaseFragment() {
             adapter = this@MenuFragment.adapter
         }
 
-        adapter.items = viewModel.getMenuItems(this.requireContext())
+        adapter.apply {
+            categories = viewModel.getMenuCategories(this@MenuFragment.requireContext())
+            itemGroups = viewModel.getMenuItemGroups(this@MenuFragment.requireContext())
+            notifyDataSetChanged()
+        }
     }
 }
