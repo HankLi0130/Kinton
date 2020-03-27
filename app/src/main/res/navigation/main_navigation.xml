@@ -2,13 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/navigation_menu">
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/menu_dest">
 
     <fragment
-        android:id="@+id/navigation_menu"
+        android:id="@+id/menu_dest"
         android:name="ca.hankli.kinton.ui.main.menu.MenuFragment"
         android:label="@string/title_menu"
         tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/link_dest"
+        android:name="ca.hankli.kinton.ui.main.link.LinkFragment"
+        android:label="@string/title_link"
+        tools:layout="@layout/fragment_link" />
 
 </navigation>

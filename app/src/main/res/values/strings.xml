@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Kinton</string>
+
     <string name="title_menu">Menu</string>
+    <string name="title_link">Link</string>
 </resources>
