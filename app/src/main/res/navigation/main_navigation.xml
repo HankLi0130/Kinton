@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_menu"
-        android:name="ca.hankli.kinton.ui.menu.MenuFragment"
+        android:name="ca.hankli.kinton.ui.main.menu.MenuFragment"
         android:label="@string/title_menu"
         tools:layout="@layout/fragment_menu" />
 

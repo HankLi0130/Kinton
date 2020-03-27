@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui
+package ca.hankli.kinton.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

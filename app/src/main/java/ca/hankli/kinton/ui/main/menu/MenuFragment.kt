@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui.menu
+package ca.hankli.kinton.ui.main.menu
 
 import android.os.Bundle
 import android.view.View

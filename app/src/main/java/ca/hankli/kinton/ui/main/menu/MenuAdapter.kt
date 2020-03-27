@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui.menu
+package ca.hankli.kinton.ui.main.menu
 
 import android.view.LayoutInflater
 import android.view.View
