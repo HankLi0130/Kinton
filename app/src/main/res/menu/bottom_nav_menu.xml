@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@id/menu_dest"
-        android:icon="@drawable/ic_ramen"
+        android:icon="@drawable/ic_restaurant_menu_24dp"
         android:title="@string/title_menu" />
     <item
-        android:id="@id/link_dest"
-        android:icon="@drawable/ic_gyoza"
-        android:title="@string/title_link" />
+        android:id="@id/card_dest"
+        android:icon="@drawable/ic_card_giftcard_24dp"
+        android:title="@string/title_card" />
 </menu>
