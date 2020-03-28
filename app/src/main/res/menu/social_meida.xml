@@ -2,24 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--    <item-->
-    <!--        android:id="@+id/visit_kinton"-->
-    <!--        android:icon="@drawable/ic_card_giftcard_24dp"-->
-    <!--        android:title="@string/kinton_ramen" />-->
-
     <item
-        android:id="@+id/visit_facebook"
+        android:id="@+id/action_visit_facebook"
         android:icon="@drawable/ic_facebook"
         android:title="@string/facebook"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/visit_instagram"
+        android:id="@+id/action_visit_instagram"
         android:icon="@drawable/ic_instagram"
         android:title="@string/instagram"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/visit_twitter"
+        android:id="@+id/action_visit_twitter"
         android:icon="@drawable/ic_twitter"
         android:title="@string/twitter"
         app:showAsAction="ifRoom" />

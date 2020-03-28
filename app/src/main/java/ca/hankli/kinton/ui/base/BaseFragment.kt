@@ -13,6 +13,14 @@ open class BaseFragment : Fragment() {
     @LayoutRes
     protected open val layoutId = NO_RESOURCE
 
+    protected open val hasOptionsMenu = false
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setHasOptionsMenu(hasOptionsMenu)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
