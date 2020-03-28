@@ -7,15 +7,17 @@
         android:icon="@drawable/ic_facebook"
         android:title="@string/facebook"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_visit_instagram"
-        android:icon="@drawable/ic_instagram"
-        android:title="@string/instagram"
-        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_visit_twitter"
         android:icon="@drawable/ic_twitter"
         android:title="@string/twitter"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_visit_instagram"
+        android:icon="@drawable/ic_instagram"
+        android:title="@string/instagram"
+        app:showAsAction="ifRoom" />
+
 </menu>
