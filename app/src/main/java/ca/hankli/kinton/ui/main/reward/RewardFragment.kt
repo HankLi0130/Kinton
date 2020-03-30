@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui.main.card
+package ca.hankli.kinton.ui.main.reward
 
 import android.view.Menu
 import android.view.MenuInflater
@@ -7,7 +7,7 @@ import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.base.BaseFragment
 import ca.hankli.kinton.util.extension.visit
 
-class CardFragment : BaseFragment() {
+class RewardFragment : BaseFragment() {
 
     override val layoutId: Int
         get() = R.layout.fragment_card

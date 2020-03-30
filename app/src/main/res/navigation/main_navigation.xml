@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_menu" />
 
     <fragment
-        android:id="@+id/card_dest"
-        android:name="ca.hankli.kinton.ui.main.card.CardFragment"
-        android:label="@string/title_card"
+        android:id="@+id/reward_dest"
+        android:name="ca.hankli.kinton.ui.main.reward.RewardFragment"
+        android:label="@string/title_reward"
         tools:layout="@layout/fragment_card" />
 
 </navigation>
