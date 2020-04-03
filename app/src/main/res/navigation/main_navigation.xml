@@ -15,6 +15,6 @@
         android:id="@+id/reward_dest"
         android:name="ca.hankli.kinton.ui.main.reward.RewardFragment"
         android:label="@string/title_reward"
-        tools:layout="@layout/fragment_card" />
+        tools:layout="@layout/fragment_reward" />
 
 </navigation>

@@ -3,11 +3,11 @@ package ca.hankli.kinton.ui.main.menu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import ca.hankli.kinton.R
 import ca.hankli.kinton.model.MenuCategory
 import ca.hankli.kinton.model.MenuItem
 import ca.hankli.kinton.ui.adapter.SectionAdapter
+import ca.hankli.kinton.ui.viewholder.BaseViewHolder
 import kotlinx.android.synthetic.main.view_holder_label_1.view.*
 import kotlinx.android.synthetic.main.view_holder_row_1.view.*
 import kotlinx.android.synthetic.main.view_holder_row_1.view.icon
@@ -52,9 +52,9 @@ class MenuAdapter : SectionAdapter<MenuCategoryViewHolder, MenuItemViewHolder>()
     }
 }
 
-class MenuCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class MenuCategoryViewHolder(view: View) : BaseViewHolder<MenuCategory>(view) {
 
-    fun bind(item: MenuCategory) {
+    override fun bind(item: MenuCategory) {
         itemView.apply {
             icon.setImageResource(item.iconRes)
             label.text = item.name
@@ -62,9 +62,9 @@ class MenuCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     }
 }
 
-class MenuItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class MenuItemViewHolder(view: View) : BaseViewHolder<MenuItem>(view) {
 
-    fun bind(item: MenuItem) {
+    override fun bind(item: MenuItem) {
         itemView.apply {
             icon.setImageResource(item.iconRes)
             title.text = item.title
