@@ -5,10 +5,10 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import androidx.fragment.app.viewModels
 import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_menu.view.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MenuFragment : BaseFragment() {
 
@@ -18,7 +18,7 @@ class MenuFragment : BaseFragment() {
     override val hasOptionsMenu: Boolean
         get() = true
 
-    private val viewModel: MenuViewModel by viewModels()
+    private val viewModel: MenuViewModel by viewModel()
 
     private val adapter: MenuAdapter = MenuAdapter()
 
@@ -29,8 +29,8 @@ class MenuFragment : BaseFragment() {
         }
 
         adapter.apply {
-            categories = viewModel.getMenuCategories(this@MenuFragment.requireContext())
-            itemGroups = viewModel.getMenuItemGroups(this@MenuFragment.requireContext())
+            categories = viewModel.getMenuCategories()
+            itemGroups = viewModel.getMenuItemGroups()
             notifyDataSetChanged()
         }
     }
