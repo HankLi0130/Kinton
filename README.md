@@ -1,13 +1,15 @@
 # Kinton Ramen
+The best Japanese Ramen restaurant in Canada. 
+
+I love Kinton Ramen and I've worked there as a kitcher helper.
+
+## Android App
+
 
 
 ## LICENSE
 
 ```
-Copyright (C) Hank Li - All Rights Reserved
-
-Unauthorized copying of this file, via any medium is strictly prohibited. 
-
-Written by Hank Li, March 2020.
+Copyright (C) 2020 Hank Li. All rights reserved
 
 ```
