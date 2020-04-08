@@ -11,5 +11,4 @@ I love Kinton Ramen and I've worked there as a kitcher helper.
 
 ```
 Copyright (C) 2020 Hank Li. All rights reserved
-
 ```
