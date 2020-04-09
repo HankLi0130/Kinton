@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import ca.hankli.kinton.R
 import ca.hankli.kinton.model.MenuCategory
 import ca.hankli.kinton.model.MenuItem
-import ca.hankli.kinton.ui.adapter.SectionAdapter
-import ca.hankli.kinton.ui.viewholder.BaseViewHolder
+import ca.hankli.kinton.ui.util.BaseViewHolder
+import ca.hankli.kinton.ui.util.SectionAdapter
 import kotlinx.android.synthetic.main.view_holder_label_1.view.*
 import kotlinx.android.synthetic.main.view_holder_row_1.view.*
 import kotlinx.android.synthetic.main.view_holder_row_1.view.icon

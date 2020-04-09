@@ -6,7 +6,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import ca.hankli.kinton.R
-import ca.hankli.kinton.ui.base.BaseFragment
+import ca.hankli.kinton.ui.util.BaseFragment
 import ca.hankli.kinton.util.extension.visit
 import kotlinx.android.synthetic.main.fragment_reward.view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

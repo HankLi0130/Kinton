@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui.viewholder
+package ca.hankli.kinton.ui.util
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

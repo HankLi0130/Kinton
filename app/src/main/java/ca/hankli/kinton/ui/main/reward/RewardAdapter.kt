@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.hankli.kinton.R
 import ca.hankli.kinton.model.RewardItem
-import ca.hankli.kinton.ui.viewholder.BaseViewHolder
+import ca.hankli.kinton.ui.util.BaseViewHolder
 import kotlinx.android.synthetic.main.view_holder_row_2.view.*
 
 class RewardAdapter : RecyclerView.Adapter<RewardItemViewHolder>() {

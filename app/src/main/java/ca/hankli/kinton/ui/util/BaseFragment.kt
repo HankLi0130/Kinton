@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui.base
+package ca.hankli.kinton.ui.util
 
 import android.os.Bundle
 import android.view.LayoutInflater

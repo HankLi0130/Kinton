@@ -1,4 +1,4 @@
-package ca.hankli.kinton.ui.adapter
+package ca.hankli.kinton.ui.util
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -49,7 +49,12 @@ abstract class SectionAdapter<L : RecyclerView.ViewHolder, R : RecyclerView.View
 
             // Add rows
             for (rowPosition in 0 until getRowCountInSection(labelPosition)) {
-                list.add(Item(labelPosition, rowPosition))
+                list.add(
+                    Item(
+                        labelPosition,
+                        rowPosition
+                    )
+                )
             }
         }
 
