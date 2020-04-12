@@ -6,12 +6,12 @@
 
     <include
         android:id="@+id/include_profile"
-        layout="@layout/temp_profile" />
+        layout="@layout/card_profile" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reward_list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
         android:background="@color/kintonYellow"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

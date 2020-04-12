@@ -8,20 +8,19 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_margin="8dp"
+        android:layout_width="@dimen/icon_size_36"
+        android:layout_height="@dimen/icon_size_36"
+        android:layout_margin="@dimen/margin_size_8"
         tools:src="@drawable/pic_category_pork" />
 
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/margin_size_8"
         android:textColor="@color/kintonWhite"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size_title"
         tools:text="Pork" />
 
 </LinearLayout>

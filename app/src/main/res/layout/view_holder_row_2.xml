@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="12dp">
+    app:cardCornerRadius="@dimen/kinton_cardview_radius_value">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,9 +13,9 @@
 
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="112dp"
-            android:layout_height="112dp"
-            android:layout_margin="8dp"
+            android:layout_width="@dimen/icon_size_96"
+            android:layout_height="@dimen/icon_size_96"
+            android:layout_margin="@dimen/margin_size_8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,8 +23,10 @@
 
         <LinearLayout
             android:id="@+id/group"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_8"
+            android:layout_marginEnd="@dimen/margin_size_8"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@id/icon"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,10 +37,8 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
                 android:textColor="@color/kintonWhite"
-                android:textSize="24sp"
+                android:textSize="@dimen/text_size_title"
                 android:textStyle="bold"
                 tools:text="10pc GYOZA + Badge" />
 
@@ -50,8 +46,6 @@
                 android:id="@+id/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
                 android:textColor="@color/kintonWhite"
                 tools:text="10 bowls" />
 

@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.util.BaseFragment
+import ca.hankli.kinton.ui.util.MarginItemDecoration
 import kotlinx.android.synthetic.main.fragment_menu.view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -26,6 +27,9 @@ class MenuFragment : BaseFragment() {
         view.menu_list.apply {
             setHasFixedSize(true)
             adapter = this@MenuFragment.adapter
+            addItemDecoration(
+                MarginItemDecoration(resources.getDimension(R.dimen.padding_size_12).toInt())
+            )
         }
 
         adapter.apply {

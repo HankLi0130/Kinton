@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="app_bar_height">180dp</dimen>
+
+    <dimen name="kinton_cardview_radius_value">12dp</dimen>
+
+    <dimen name="match_constraint">0dp</dimen>
+
+    <dimen name="text_size_title">24sp</dimen>
+
+    <dimen name="icon_size_24">24dp</dimen>
+    <dimen name="icon_size_36">36dp</dimen>
+    <dimen name="icon_size_48">48dp</dimen>
+    <dimen name="icon_size_72">72dp</dimen>
+    <dimen name="icon_size_96">96dp</dimen>
+
+    <dimen name="margin_size_8">8dp</dimen>
+    <dimen name="margin_size_12">12dp</dimen>
+    <dimen name="margin_size_16">16dp</dimen>
+    <dimen name="margin_size_20">20dp</dimen>
+
+    <dimen name="padding_size_8">8dp</dimen>
+    <dimen name="padding_size_12">12dp</dimen>
+    <dimen name="padding_size_16">16dp</dimen>
+    <dimen name="padding_size_20">20dp</dimen>
+
 </resources>

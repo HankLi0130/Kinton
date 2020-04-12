@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/kinton_cardview_radius_value">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/kintonBlack"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_size_16"
+        android:paddingBottom="@dimen/padding_size_16">
+
+        <TextView
+            android:id="@+id/view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/kintonWhite"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="You've eaten 107 bowls" />
+
+        <LinearLayout
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_size_8"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/view_title"
+            app:layout_constraintStart_toStartOf="@id/view_title"
+            app:layout_constraintTop_toBottomOf="@id/view_title">
+
+            <ImageView
+                android:id="@+id/view_badge_10"
+                android:layout_width="@dimen/icon_size_36"
+                android:layout_height="@dimen/icon_size_36"
+                android:layout_margin="@dimen/margin_size_8"
+                android:src="@drawable/pic_badge_10" />
+
+            <ImageView
+                android:id="@+id/view_badge_30"
+                android:layout_width="@dimen/icon_size_36"
+                android:layout_height="@dimen/icon_size_36"
+                android:layout_margin="@dimen/margin_size_8"
+                android:src="@drawable/pic_badge_30" />
+
+            <ImageView
+                android:id="@+id/view_badge_50"
+                android:layout_width="@dimen/icon_size_36"
+                android:layout_height="@dimen/icon_size_36"
+                android:layout_margin="@dimen/margin_size_8"
+                android:src="@drawable/pic_badge_50" />
+
+            <ImageView
+                android:id="@+id/view_badge_100"
+                android:layout_width="@dimen/icon_size_36"
+                android:layout_height="@dimen/icon_size_36"
+                android:layout_margin="@dimen/margin_size_8"
+                android:src="@drawable/pic_badge_100" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

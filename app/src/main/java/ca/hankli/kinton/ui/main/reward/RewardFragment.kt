@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.util.BaseFragment
+import ca.hankli.kinton.ui.util.MarginItemDecoration
 import ca.hankli.kinton.util.extension.visit
 import kotlinx.android.synthetic.main.fragment_reward.view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -31,6 +32,9 @@ class RewardFragment : BaseFragment() {
         view.reward_list.apply {
             setHasFixedSize(true)
             adapter = this@RewardFragment.adapter
+            addItemDecoration(
+                MarginItemDecoration(resources.getDimension(R.dimen.padding_size_12).toInt())
+            )
         }
 
         adapter.apply {
