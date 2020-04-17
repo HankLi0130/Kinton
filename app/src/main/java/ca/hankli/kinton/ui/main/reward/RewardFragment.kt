@@ -1,8 +1,6 @@
 package ca.hankli.kinton.ui.main.reward
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import ca.hankli.kinton.R
@@ -14,19 +12,18 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RewardFragment : BaseFragment() {
 
-    override val layoutId: Int
+    override val layoutRes: Int
         get() = R.layout.fragment_reward
 
     override val hasOptionsMenu: Boolean
         get() = true
 
+    override val menuRes: Int
+        get() = R.menu.social_meida
+
     private val viewModel: RewardViewModel by viewModel()
 
     private val adapter: RewardAdapter = RewardAdapter()
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.social_meida, menu)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view.reward_list.apply {
