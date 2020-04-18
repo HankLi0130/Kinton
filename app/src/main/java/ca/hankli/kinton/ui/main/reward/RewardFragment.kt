@@ -34,10 +34,10 @@ class RewardFragment : BaseFragment() {
             )
         }
 
-        adapter.apply {
-            items = viewModel.getRewardItems()
-            notifyDataSetChanged()
-        }
+//        adapter.apply {
+//            items = viewModel.getRewardItems()
+//            notifyDataSetChanged()
+//        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

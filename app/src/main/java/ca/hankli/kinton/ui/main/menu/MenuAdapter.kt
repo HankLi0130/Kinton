@@ -1,6 +1,5 @@
 package ca.hankli.kinton.ui.main.menu
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ca.hankli.kinton.R
@@ -8,6 +7,7 @@ import ca.hankli.kinton.model.MenuCategory
 import ca.hankli.kinton.model.MenuItem
 import ca.hankli.kinton.ui.util.BaseViewHolder
 import ca.hankli.kinton.ui.util.SectionAdapter
+import ca.hankli.kinton.util.extension.viewOf
 import kotlinx.android.synthetic.main.view_holder_label_1.view.*
 import kotlinx.android.synthetic.main.view_holder_row_1.view.*
 import kotlinx.android.synthetic.main.view_holder_row_1.view.icon
@@ -19,14 +19,12 @@ class MenuAdapter : SectionAdapter<MenuCategoryViewHolder, MenuItemViewHolder>()
     var itemGroups: Map<Int, List<MenuItem>> = emptyMap()
 
     override fun onCreateLabelViewHolder(parent: ViewGroup): MenuCategoryViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.view_holder_label_1, parent, false)
+        val view = parent.viewOf(R.layout.view_holder_label_1)
         return MenuCategoryViewHolder(view)
     }
 
     override fun onCreateRowViewHolder(parent: ViewGroup): MenuItemViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.view_holder_row_1, parent, false)
+        val view = parent.viewOf(R.layout.view_holder_row_1)
         return MenuItemViewHolder(view)
     }
 
