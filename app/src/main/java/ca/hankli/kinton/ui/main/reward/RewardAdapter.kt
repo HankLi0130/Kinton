@@ -1,38 +1,43 @@
 package ca.hankli.kinton.ui.main.reward
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.hankli.kinton.R
-import ca.hankli.kinton.model.RewardItem
-import ca.hankli.kinton.ui.util.BaseViewHolder
-import kotlinx.android.synthetic.main.view_holder_row_2.view.*
+import ca.hankli.kinton.util.extension.viewOf
+import kotlinx.android.synthetic.main.card_eaten_bowls.view.*
 
-class RewardAdapter : RecyclerView.Adapter<RewardItemViewHolder>() {
+class RewardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    var items: List<RewardItem> = emptyList()
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RewardItemViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.view_holder_row_2, parent, false)
-        return RewardItemViewHolder(view)
+    override fun getItemViewType(position: Int): Int {
+        return position
     }
 
-    override fun onBindViewHolder(holder: RewardItemViewHolder, position: Int) {
-        holder.bind(items[position])
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return when (viewType) {
+            0 -> EatenBowlsCard(parent.viewOf(R.layout.card_eaten_bowls))
+            else -> throw IllegalArgumentException("Not support this view type.")
+        }
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when (position) {
+            0 -> {
+                if (holder is EatenBowlsCard) {
+                    holder.bind(107)
+                }
+            }
+        }
+    }
+
+    override fun getItemCount(): Int = 1
 }
 
-class RewardItemViewHolder(view: View) : BaseViewHolder<RewardItem>(view) {
+private class EatenBowlsCard(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    override fun bind(item: RewardItem) {
-        itemView.apply {
-            icon.setImageResource(item.iconRes)
-            title.text = item.title
-            subtitle.text = item.requestedPoints.toString()
+    fun bind(count: Int) {
+        with(itemView) {
+            view_title.text = context.getString(R.string.eaten_bowls, count)
         }
     }
 }
