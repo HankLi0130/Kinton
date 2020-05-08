@@ -7,6 +7,7 @@
     <string name="search">Search</string>
 
     <string name="eaten_bowls">You\'ve eaten %d bowls</string>
+    <string name="scan_for_points">Scan to get your points</string>
 
     <!--    Social Meida-->
     <string name="facebook">Facebook</string>
