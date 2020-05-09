@@ -6,7 +6,7 @@ buildscript {
         koin_version= "2.1.5"
         moshi_version = "1.9.2"
         androidx_lifecycle_version = "2.2.0"
-        androidx_navigation_version = "2.2.1"
+        androidx_navigation_version = "2.2.2"
     }
     repositories {
         google()
