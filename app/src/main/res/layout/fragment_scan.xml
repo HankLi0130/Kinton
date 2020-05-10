@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.util.ScanActivity">
+    tools:context=".ui.util.ScanFragment">
 
     <com.journeyapps.barcodescanner.DecoratedBarcodeView
         android:id="@+id/view_barcode"
@@ -13,7 +13,8 @@
         app:layout_constraintBottom_toTopOf="@+id/view_scan_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:zxing_scanner_layout="@layout/view_scanner" />
 
     <TextView
         android:id="@+id/view_scan_hint"

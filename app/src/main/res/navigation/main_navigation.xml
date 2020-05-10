@@ -16,4 +16,10 @@
         android:label="@string/title_reward"
         tools:layout="@layout/fragment_reward" />
 
+    <fragment
+        android:id="@+id/scan_dest"
+        android:name="ca.hankli.kinton.ui.util.ScanFragment"
+        android:label="@string/title_scan"
+        tools:layout="@layout/fragment_scan" />
+
 </navigation>

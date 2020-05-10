@@ -1,16 +1,15 @@
 package ca.hankli.kinton.ui.main.reward
 
 import android.Manifest
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.util.BaseFragment
-import ca.hankli.kinton.ui.util.ScanActivity
 import ca.hankli.kinton.util.REQUEST_PERMISSION
-import ca.hankli.kinton.util.arePermissionGranted
+import ca.hankli.kinton.util.arePermissionsGranted
 import ca.hankli.kinton.util.extension.askForPermissions
 import ca.hankli.kinton.util.extension.visit
 import kotlinx.android.synthetic.main.fragment_reward.*
@@ -44,7 +43,7 @@ class RewardFragment : BaseFragment() {
     ) {
         when (requestCode) {
             REQUEST_PERMISSION -> {
-                if (arePermissionGranted(grantResults)) {
+                if (arePermissionsGranted(grantResults)) {
                     showScanner()
                 } else {
                     showPermissionDenied()
@@ -54,8 +53,7 @@ class RewardFragment : BaseFragment() {
     }
 
     private fun showScanner() {
-        val intent = Intent(requireContext(), ScanActivity::class.java)
-        startActivity(intent)
+        findNavController().navigate(R.id.scan_dest)
     }
 
     private fun showPermissionDenied() {
