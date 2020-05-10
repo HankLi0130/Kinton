@@ -18,10 +18,14 @@
     <dimen name="margin_size_12">12dp</dimen>
     <dimen name="margin_size_16">16dp</dimen>
     <dimen name="margin_size_20">20dp</dimen>
+    <dimen name="margin_size_36">36dp</dimen>
+    <dimen name="margin_size_48">48dp</dimen>
 
     <dimen name="padding_size_8">8dp</dimen>
     <dimen name="padding_size_12">12dp</dimen>
     <dimen name="padding_size_16">16dp</dimen>
     <dimen name="padding_size_20">20dp</dimen>
+    <dimen name="padding_size_36">36dp</dimen>
+    <dimen name="padding_size_48">48dp</dimen>
 
 </resources>

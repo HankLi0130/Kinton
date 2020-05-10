@@ -1,12 +1,14 @@
 package ca.hankli.kinton.ui.main.reward
 
 import android.Manifest
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.util.BaseFragment
+import ca.hankli.kinton.ui.util.ScanActivity
 import ca.hankli.kinton.util.REQUEST_PERMISSION
 import ca.hankli.kinton.util.arePermissionGranted
 import ca.hankli.kinton.util.extension.askForPermissions
@@ -35,8 +37,25 @@ class RewardFragment : BaseFragment() {
         }
     }
 
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
+            REQUEST_PERMISSION -> {
+                if (arePermissionGranted(grantResults)) {
+                    showScanner()
+                } else {
+                    showPermissionDenied()
+                }
+            }
+        }
+    }
+
     private fun showScanner() {
-        Toast.makeText(requireContext(), "show scanner!", Toast.LENGTH_SHORT).show()
+        val intent = Intent(requireContext(), ScanActivity::class.java)
+        startActivity(intent)
     }
 
     private fun showPermissionDenied() {
@@ -58,22 +77,6 @@ class RewardFragment : BaseFragment() {
                 true
             }
             else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        when (requestCode) {
-            REQUEST_PERMISSION -> {
-                if (arePermissionGranted(grantResults)) {
-                    showScanner()
-                } else {
-                    showPermissionDenied()
-                }
-            }
         }
     }
 }
