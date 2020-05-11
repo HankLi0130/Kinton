@@ -1,4 +1,4 @@
-# Kinton Ramen
+# [Kinton Ramen](https://www.kintonramen.com/)
 
 The best Japanese Ramen restaurant in Canada.
 
