@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupActionBar(navController: NavController) {
-        setSupportActionBar(view_toolbar)
         setupActionBarWithNavController(navController, appBarConfig)
     }
 
