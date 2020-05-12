@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
 
         val topLevelDestinations = setOf(R.id.menu_dest, R.id.reward_dest)
+
         appBarConfig = AppBarConfiguration(topLevelDestinations)
 
         setupActionBar(navController)

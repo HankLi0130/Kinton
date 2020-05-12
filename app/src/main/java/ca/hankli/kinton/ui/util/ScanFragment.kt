@@ -1,6 +1,7 @@
 package ca.hankli.kinton.ui.util
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import ca.hankli.kinton.R
 import ca.hankli.kinton.util.extension.vibrate
@@ -27,6 +28,7 @@ class ScanFragment : BaseFragment(), BarcodeCallback {
 
     override fun barcodeResult(result: BarcodeResult?) {
         // TODO return result
+        Log.d("debug", result.toString())
         vibrate()
     }
 
