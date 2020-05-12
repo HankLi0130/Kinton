@@ -1,14 +1,17 @@
 package ca.hankli.kinton.ui.util
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import ca.hankli.kinton.R
+import ca.hankli.kinton.ui.main.MainViewModel
+import ca.hankli.kinton.util.EMPTY
 import ca.hankli.kinton.util.extension.vibrate
 import com.journeyapps.barcodescanner.BarcodeCallback
 import com.journeyapps.barcodescanner.BarcodeResult
 import com.journeyapps.barcodescanner.CaptureManager
 import kotlinx.android.synthetic.main.fragment_scan.*
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class ScanFragment : BaseFragment(), BarcodeCallback {
 
@@ -16,6 +19,8 @@ class ScanFragment : BaseFragment(), BarcodeCallback {
         get() = R.layout.fragment_scan
 
     private lateinit var captureManager: CaptureManager
+
+    private val sharedViewModel: MainViewModel by sharedViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -27,9 +32,9 @@ class ScanFragment : BaseFragment(), BarcodeCallback {
     }
 
     override fun barcodeResult(result: BarcodeResult?) {
-        // TODO return result
-        Log.d("debug", result.toString())
+        sharedViewModel.postBarcodeJson(result?.text ?: EMPTY)
         vibrate()
+        findNavController().navigateUp()
     }
 
     override fun onResume() {

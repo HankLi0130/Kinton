@@ -2,17 +2,21 @@ package ca.hankli.kinton.ui.main.reward
 
 import android.Manifest
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import ca.hankli.kinton.R
+import ca.hankli.kinton.ui.main.MainViewModel
 import ca.hankli.kinton.ui.util.BaseFragment
 import ca.hankli.kinton.util.REQUEST_PERMISSION
 import ca.hankli.kinton.util.arePermissionsGranted
 import ca.hankli.kinton.util.extension.askForPermissions
 import ca.hankli.kinton.util.extension.visit
 import kotlinx.android.synthetic.main.fragment_reward.*
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RewardFragment : BaseFragment() {
@@ -28,12 +32,18 @@ class RewardFragment : BaseFragment() {
 
     private val viewModel: RewardViewModel by viewModel()
 
+    private val sharedViewModel: MainViewModel by sharedViewModel()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view_scan.setOnClickListener {
             askForPermissions(arrayOf(Manifest.permission.CAMERA), REQUEST_PERMISSION) {
                 showScanner()
             }
         }
+
+        sharedViewModel.barcodeJson.observe(viewLifecycleOwner, Observer { json ->
+            Log.d("debug", json)
+        })
     }
 
     override fun onRequestPermissionsResult(

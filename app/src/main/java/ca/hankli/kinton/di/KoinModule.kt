@@ -1,5 +1,6 @@
 package ca.hankli.kinton.di
 
+import ca.hankli.kinton.ui.main.MainViewModel
 import ca.hankli.kinton.ui.main.menu.MenuViewModel
 import ca.hankli.kinton.ui.main.reward.RewardViewModel
 import ca.hankli.kinton.util.json.adapter.IconResourceAdapter
@@ -19,6 +20,7 @@ private val globalModule = module {
 }
 
 private val viewModelModule = module {
+    viewModel { MainViewModel() }
     viewModel { MenuViewModel(get()) }
     viewModel { RewardViewModel(get()) }
 }
