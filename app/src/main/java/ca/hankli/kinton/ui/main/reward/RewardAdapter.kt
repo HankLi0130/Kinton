@@ -37,7 +37,7 @@ private class EatenBowlsCard(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     fun bind(count: Int) {
         with(itemView) {
-            view_title.text = context.getString(R.string.eaten_bowls, count)
+            view_title.text = context.getString(R.string.total_number_of_bowls, count)
         }
     }
 }

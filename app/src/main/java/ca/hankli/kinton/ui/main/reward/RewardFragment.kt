@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import ca.hankli.kinton.R
@@ -15,6 +16,7 @@ import ca.hankli.kinton.util.arePermissionsGranted
 import ca.hankli.kinton.util.extension.askForPermissions
 import ca.hankli.kinton.util.extension.visit
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.card_eaten_bowls.*
 import kotlinx.android.synthetic.main.fragment_reward.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -35,6 +37,8 @@ class RewardFragment : BaseFragment() {
     private val sharedViewModel: MainViewModel by sharedViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        viewModel.notifyUIKintonBowlerInfo()
+
         view_scan.setOnClickListener {
             askForPermissions(arrayOf(Manifest.permission.CAMERA), REQUEST_PERMISSION) {
                 showScanner()
@@ -43,7 +47,7 @@ class RewardFragment : BaseFragment() {
 
         sharedViewModel.scanEvent.observe(viewLifecycleOwner, Observer {
             it.getContentIfNotHandle()?.let { json ->
-                viewModel.handleJson(json)
+                viewModel.handleScanResult(json)
             }
         })
 
@@ -51,6 +55,15 @@ class RewardFragment : BaseFragment() {
             it.getContentIfNotHandle()?.let { message ->
                 Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
             }
+        })
+
+        viewModel.kintonBowlerInfo.observe(viewLifecycleOwner, Observer {
+            view_title.text = getString(R.string.total_number_of_bowls, it.totalNumberOfBowls)
+
+            view_badge_10.isVisible = it.totalNumberOfBowls >= 10
+            view_badge_30.isVisible = it.totalNumberOfBowls >= 30
+            view_badge_50.isVisible = it.totalNumberOfBowls >= 50
+            view_badge_100.isVisible = it.totalNumberOfBowls >= 100
         })
     }
 

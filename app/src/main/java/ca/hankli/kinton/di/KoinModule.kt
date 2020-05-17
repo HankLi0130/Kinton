@@ -1,6 +1,7 @@
 package ca.hankli.kinton.di
 
 import ca.hankli.kinton.repository.JsonParseRepo
+import ca.hankli.kinton.repository.PointTransactionRepo
 import ca.hankli.kinton.ui.main.MainViewModel
 import ca.hankli.kinton.ui.main.menu.MenuViewModel
 import ca.hankli.kinton.ui.main.reward.RewardViewModel
@@ -22,12 +23,13 @@ private val globalModule = module {
 
 private val repositoryModule = module {
     single { JsonParseRepo(get()) }
+    single { PointTransactionRepo() }
 }
 
 private val viewModelModule = module {
     viewModel { MainViewModel() }
     viewModel { MenuViewModel(get()) }
-    viewModel { RewardViewModel(get()) }
+    viewModel { RewardViewModel(get(), get()) }
 }
 
 val appComponent = listOf(globalModule, repositoryModule, viewModelModule)
