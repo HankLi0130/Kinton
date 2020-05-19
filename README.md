@@ -1,10 +1,18 @@
 # [Kinton Ramen](https://www.kintonramen.com/)
 
-The best Japanese Ramen restaurant in Canada.
+The best Japanese Ramen restaurant I have ever had in Canada.
 
 ## Android App
 
-The Kinton Ramen App has online order and loyalty card two functions that help customers to order meals, earn points and redeem rewards easily.
+I created this app because I noticed that Kinton is still using the old school loyalty cards for their [Kinton Bowler](https://www.kintonramen.com/kintonbowler/) program while I work there as a kitchen helper, and I think I can do something for them.
+
+There are two parts, including menu and cards, in this Kinton Ramen App that can help customers to order meals, earn points and redeem rewards easily.
+
+## Previews
+
+![](./descriptions/preview_1.png)&nbsp;&nbsp;![](./descriptions/preview_2.png)&nbsp;&nbsp;![](./descriptions/preview_3.png)
+
+![](./descriptions/preview_4.png)&nbsp;&nbsp;![](./descriptions/preview_5.png)&nbsp;&nbsp;![](./descriptions/preview_6.gif)
 
 ## References
 
