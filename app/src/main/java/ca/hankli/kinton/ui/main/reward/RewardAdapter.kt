@@ -4,40 +4,33 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ca.hankli.kinton.R
+import ca.hankli.kinton.model.RewardItem
+import ca.hankli.kinton.ui.util.BaseViewHolder
 import ca.hankli.kinton.util.extension.viewOf
-import kotlinx.android.synthetic.main.card_eaten_bowls.view.*
+import kotlinx.android.synthetic.main.view_holder_row_2.view.*
 
-class RewardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RewardAdapter : RecyclerView.Adapter<RewardItemViewHolder>() {
 
-    override fun getItemViewType(position: Int): Int {
-        return position
+    var items: List<RewardItem> = emptyList()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RewardItemViewHolder {
+        return RewardItemViewHolder(parent.viewOf(R.layout.view_holder_row_2))
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when (viewType) {
-            0 -> EatenBowlsCard(parent.viewOf(R.layout.card_eaten_bowls))
-            else -> throw IllegalArgumentException("Not support this view type.")
-        }
+    override fun onBindViewHolder(holder: RewardItemViewHolder, position: Int) {
+        holder.bind(items[position])
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (position) {
-            0 -> {
-                if (holder is EatenBowlsCard) {
-                    holder.bind(107)
-                }
-            }
-        }
-    }
-
-    override fun getItemCount(): Int = 1
+    override fun getItemCount(): Int = items.size
 }
 
-private class EatenBowlsCard(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class RewardItemViewHolder(itemView: View) : BaseViewHolder<RewardItem>(itemView) {
 
-    fun bind(count: Int) {
+    override fun bind(item: RewardItem) {
         with(itemView) {
-            view_title.text = context.getString(R.string.total_number_of_bowls, count)
+            view_icon.setImageResource(item.iconRes)
+            view_title.text = item.title
+            view_subtitle.text = "${item.requestedPoints}"
         }
     }
 }

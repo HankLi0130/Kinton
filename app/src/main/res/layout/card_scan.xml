@@ -10,12 +10,15 @@
         android:layout_height="wrap_content"
         android:background="@color/kintonBlack"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_size_16"
+        android:paddingBottom="@dimen/padding_size_16">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_size_12"
+            android:layout_marginStart="@dimen/margin_size_12"
+            android:layout_marginEnd="@dimen/margin_size_12"
             android:maxLines="1"
             android:text="@string/scan_for_points"
             android:textColor="@color/kintonWhite"

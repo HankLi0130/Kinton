@@ -12,7 +12,7 @@
         android:background="@color/kintonBlack">
 
         <ImageView
-            android:id="@+id/icon"
+            android:id="@+id/view_icon"
             android:layout_width="@dimen/icon_size_96"
             android:layout_height="@dimen/icon_size_96"
             android:layout_margin="@dimen/margin_size_8"
@@ -28,13 +28,13 @@
             android:layout_marginStart="@dimen/margin_size_8"
             android:layout_marginEnd="@dimen/margin_size_8"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@id/icon"
+            app:layout_constraintBottom_toBottomOf="@id/view_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/icon"
-            app:layout_constraintTop_toTopOf="@id/icon">
+            app:layout_constraintStart_toEndOf="@id/view_icon"
+            app:layout_constraintTop_toTopOf="@id/view_icon">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/view_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/kintonWhite"
@@ -43,7 +43,7 @@
                 tools:text="10pc GYOZA + Badge" />
 
             <TextView
-                android:id="@+id/subtitle"
+                android:id="@+id/view_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/kintonWhite"

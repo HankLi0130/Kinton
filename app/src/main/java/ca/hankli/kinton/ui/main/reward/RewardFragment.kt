@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import ca.hankli.kinton.R
 import ca.hankli.kinton.ui.main.MainViewModel
 import ca.hankli.kinton.ui.util.BaseFragment
+import ca.hankli.kinton.ui.util.MarginItemDecoration
 import ca.hankli.kinton.util.REQUEST_PERMISSION
 import ca.hankli.kinton.util.arePermissionsGranted
 import ca.hankli.kinton.util.extension.askForPermissions
@@ -35,6 +36,8 @@ class RewardFragment : BaseFragment() {
     private val viewModel: RewardViewModel by viewModel()
 
     private val sharedViewModel: MainViewModel by sharedViewModel()
+
+    private val adapter = RewardAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel.notifyUIKintonBowlerInfo()
@@ -65,6 +68,19 @@ class RewardFragment : BaseFragment() {
             view_badge_50.isVisible = it.totalNumberOfBowls >= 50
             view_badge_100.isVisible = it.totalNumberOfBowls >= 100
         })
+
+        view_reward_list.apply {
+            setHasFixedSize(true)
+            adapter = this@RewardFragment.adapter
+            addItemDecoration(
+                MarginItemDecoration(resources.getDimension(R.dimen.padding_size_12).toInt())
+            )
+        }
+
+        adapter.apply {
+            items = viewModel.getRewardItems()
+            notifyDataSetChanged()
+        }
     }
 
     override fun onRequestPermissionsResult(
