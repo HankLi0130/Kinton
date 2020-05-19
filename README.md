@@ -10,9 +10,7 @@ There are two parts, including menu and cards, in this Kinton Ramen App that can
 
 ## Previews
 
-![](./descriptions/preview_1.gif)&nbsp;&nbsp;&nbsp;&nbsp;![](./descriptions/preview_2.gif)
-
-![](./descriptions/preview_3.gif)&nbsp;&nbsp;&nbsp;&nbsp;![](./descriptions/preview_4.gif)
+![Preview Menu](./descriptions/preview_1.gif)&nbsp;&nbsp;&nbsp;&nbsp;![Preview Rewards](./descriptions/preview_2.gif)&nbsp;&nbsp;&nbsp;&nbsp;![Preview scan barcode](./descriptions/preview_3.gif)&nbsp;&nbsp;&nbsp;&nbsp;![Preview social media](./descriptions/preview_4.gif)
 
 ## References
 
