@@ -14,11 +14,11 @@ There are two parts, including menu and cards, in this Kinton Ramen App that can
 
 ![Preview social media](./descriptions/preview_4.gif)
 
-## References
+## Notes
 
-- [Scroll your Bottom Navigation View away with 10 lines of code
-](https://android.jlelse.eu/scroll-your-bottom-navigation-view-away-with-10-lines-of-code-346f1ed40e9e)
-
+- [Settings](./descriptions/settings.md)
+- [Use Case](./descriptions/usecase.md)
+- [Reference](./descriptions/reference.md)
 
 ## LICENSE
 
