@@ -22,16 +22,7 @@ import kotlinx.android.synthetic.main.fragment_reward.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class RewardFragment : BaseFragment() {
-
-    override val layoutRes: Int
-        get() = R.layout.fragment_reward
-
-    override val hasOptionsMenu: Boolean
-        get() = true
-
-    override val menuRes: Int
-        get() = R.menu.social_meida
+class RewardFragment : BaseFragment(R.layout.fragment_reward, true, R.menu.social_meida) {
 
     private val viewModel: RewardViewModel by viewModel()
 
@@ -100,7 +91,7 @@ class RewardFragment : BaseFragment() {
     }
 
     private fun showScanner() {
-        findNavController().navigate(R.id.scan_dest)
+        findNavController().navigate(R.id.action_reward_dest_to_scan_dest)
     }
 
     private fun showPermissionDenied() {

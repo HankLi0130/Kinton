@@ -1,41 +1,38 @@
 package ca.hankli.kinton.ui.util
 
 import android.os.Bundle
-import android.view.*
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.annotation.LayoutRes
 import androidx.annotation.MenuRes
 import androidx.fragment.app.Fragment
 import ca.hankli.kinton.util.NO_RESOURCE
 
-open class BaseFragment : Fragment() {
+open class BaseFragment : Fragment {
 
-    @LayoutRes
-    protected open val layoutRes: Int = NO_RESOURCE
+    constructor() : super()
 
-    protected open val hasOptionsMenu = false
+    constructor(
+        @LayoutRes layoutId: Int,
+        hasOptionsMenu: Boolean = false,
+        @MenuRes menuRes: Int = NO_RESOURCE
+    ) : super(layoutId) {
+        this.hasMenu = hasOptionsMenu
+        this.menuRes = menuRes
+    }
+
+    private var hasMenu = false
 
     @MenuRes
-    protected open val menuRes: Int = NO_RESOURCE
+    private var menuRes: Int = NO_RESOURCE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setHasOptionsMenu(hasOptionsMenu)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return if (layoutRes == NO_RESOURCE) {
-            super.onCreateView(inflater, container, savedInstanceState)
-        } else {
-            inflater.inflate(layoutRes, container, false)
-        }
+        setHasOptionsMenu(hasMenu)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        if (menuRes == NO_RESOURCE) return else inflater.inflate(menuRes, menu)
+        if (menuRes != NO_RESOURCE) inflater.inflate(menuRes, menu)
     }
 }

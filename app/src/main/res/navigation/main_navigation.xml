@@ -14,7 +14,13 @@
         android:id="@+id/reward_dest"
         android:name="ca.hankli.kinton.ui.main.reward.RewardFragment"
         android:label="@string/title_reward"
-        tools:layout="@layout/fragment_reward" />
+        tools:layout="@layout/fragment_reward">
+
+        <action
+            android:id="@+id/action_reward_dest_to_scan_dest"
+            app:destination="@id/scan_dest" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/scan_dest"

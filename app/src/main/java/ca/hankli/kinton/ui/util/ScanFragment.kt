@@ -13,10 +13,7 @@ import com.journeyapps.barcodescanner.CaptureManager
 import kotlinx.android.synthetic.main.fragment_scan.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class ScanFragment : BaseFragment(), BarcodeCallback {
-
-    override val layoutRes: Int
-        get() = R.layout.fragment_scan
+class ScanFragment : BaseFragment(R.layout.fragment_scan), BarcodeCallback {
 
     private lateinit var captureManager: CaptureManager
 

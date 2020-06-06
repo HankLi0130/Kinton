@@ -9,16 +9,7 @@ import ca.hankli.kinton.ui.util.MarginItemDecoration
 import kotlinx.android.synthetic.main.fragment_menu.view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MenuFragment : BaseFragment() {
-
-    override val layoutRes: Int
-        get() = R.layout.fragment_menu
-
-    override val hasOptionsMenu: Boolean
-        get() = true
-
-    override val menuRes: Int
-        get() = R.menu.search
+class MenuFragment : BaseFragment(R.layout.fragment_menu, true, R.menu.search) {
 
     private val viewModel: MenuViewModel by viewModel()
 

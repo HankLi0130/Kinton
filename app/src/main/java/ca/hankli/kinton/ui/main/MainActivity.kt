@@ -12,26 +12,29 @@ import androidx.navigation.ui.setupWithNavController
 import ca.hankli.kinton.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var appBarConfig: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val navController = findNavController(R.id.nav_host_fragment)
 
         val topLevelDestinations = setOf(R.id.menu_dest, R.id.reward_dest)
 
         appBarConfig = AppBarConfiguration(topLevelDestinations)
 
+        val navController = getNavController().apply {
+            addOnDestinationChangedListener { _, destination, _ ->
+                view_bottom_nav.isVisible = topLevelDestinations.contains(destination.id)
+            }
+        }
+
         setupActionBar(navController)
         setupBottomNavMenu(navController)
+    }
 
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            view_bottom_nav.isVisible = topLevelDestinations.contains(destination.id)
-        }
+    private fun getNavController(): NavController {
+        return findNavController(R.id.nav_host_fragment)
     }
 
     private fun setupActionBar(navController: NavController) {
@@ -43,6 +46,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return findNavController(R.id.nav_host_fragment).navigateUp(appBarConfig)
+        return getNavController().navigateUp(appBarConfig) || super.onSupportNavigateUp()
     }
 }
