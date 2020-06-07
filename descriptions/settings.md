@@ -45,6 +45,7 @@
   "pic": "pic_reward_1",    // String
   "title": "10pc GYOZA + Badge",    // String
   "requested_points": 10,   // Int
+  "minimum_bowls": 0    // Int
 }
 ```
 
