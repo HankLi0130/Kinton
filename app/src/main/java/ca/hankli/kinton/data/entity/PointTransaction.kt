@@ -5,6 +5,7 @@ import java.time.LocalDate
 data class PointTransaction(
     val date: LocalDate,
     val description: String,
+    val branch: String,
     val withdrawal: Int = 0,
     val deposit: Int = 0,
     val balance: Int

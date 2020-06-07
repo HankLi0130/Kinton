@@ -1,14 +1,20 @@
 <resources>
     <string name="app_name">Kinton Ramen</string>
 
+    <!--     Menu -->
     <string name="title_menu">Menu</string>
-    <string name="title_reward">Reward</string>
-    <string name="title_scan">Scan</string>
-
     <string name="search">Search</string>
 
-    <string name="total_number_of_bowls">You\'ve eaten %d bowls</string>
+    <!--    Reward-->
+    <string name="title_reward">Reward</string>
     <string name="scan_for_points">Scan for point transaction</string>
+    <string name="total_number_of_bowls">You\'ve eaten %d bowls</string>
+    <string name="total_number_of_points">You have %d points</string>
+    <string name="requested_points">Request %d points</string>
+    <string name="minimum_bowls">Need more than %d bowls</string>
+
+    <!--    Scanner-->
+    <string name="title_scan">Scan</string>
     <string name="scan_hint">Scan QR code from Kinton Ramen</string>
 
     <!--    Social Meida-->

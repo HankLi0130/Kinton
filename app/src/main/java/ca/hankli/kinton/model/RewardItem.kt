@@ -9,5 +9,6 @@ data class RewardItem(
     @Json(name = "id") val id: Int,
     @Json(name = "pic") @IconResource val iconRes: Int,
     @Json(name = "title") val title: String,
-    @Json(name = "requested_points") val requestedPoints: Int
+    @Json(name = "requested_points") val requestedPoints: Int,
+    @Json(name = "minimum_bowls") val minimumBowls: Int
 )

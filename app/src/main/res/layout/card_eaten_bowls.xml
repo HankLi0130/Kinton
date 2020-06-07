@@ -4,32 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/kintonBlack"
     app:cardCornerRadius="@dimen/kinton_cardview_radius_value">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/kintonBlack"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
         android:paddingTop="@dimen/padding_size_16"
         android:paddingBottom="@dimen/padding_size_16">
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_man_profile" />
+
+        </androidx.cardview.widget.CardView>
+
         <TextView
-            android:id="@+id/view_title"
+            android:id="@+id/view_bowls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:textColor="@color/kintonWhite"
             android:textSize="@dimen/text_size_title"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/view_profile"
+            app:layout_constraintStart_toStartOf="@id/view_profile"
+            app:layout_constraintTop_toBottomOf="@id/view_profile"
             tools:text="You've eaten 107 bowls" />
 
         <LinearLayout
+            android:paddingBottom="@dimen/padding_size_8"
+            android:id="@+id/view_layout_badges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/view_bowls"
+            app:layout_constraintStart_toStartOf="@id/view_bowls"
+            app:layout_constraintTop_toBottomOf="@id/view_bowls">
 
             <ImageView
                 android:id="@+id/view_badge_10"
@@ -65,6 +89,19 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/view_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/kintonWhite"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/view_layout_badges"
+            app:layout_constraintStart_toStartOf="@id/view_layout_badges"
+            app:layout_constraintTop_toBottomOf="@id/view_layout_badges"
+            tools:text="You have 10 points" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

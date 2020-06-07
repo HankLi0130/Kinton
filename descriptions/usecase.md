@@ -22,6 +22,6 @@
 
 ### What kinds of point I need?
 
-1. Total number of bowler = count(deposits)
-2. Total number of exchange = count(withdrawals)
+1. Total number of bowlers = count(deposits)
+2. Total number of exchange points = count(withdrawals)
 3. Total number of current available points = balance

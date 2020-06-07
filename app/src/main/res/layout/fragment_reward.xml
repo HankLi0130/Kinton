@@ -27,6 +27,15 @@
             android:layout_marginTop="@dimen/margin_size_12"
             android:layout_marginEnd="@dimen/margin_size_12" />
 
+        <include
+            layout="@layout/view_holder_label_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_12"
+            android:layout_marginTop="@dimen/margin_size_12"
+            android:layout_marginEnd="@dimen/margin_size_12" />
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/view_reward_list"
             android:layout_width="match_parent"

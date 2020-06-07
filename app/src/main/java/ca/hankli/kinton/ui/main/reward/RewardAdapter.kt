@@ -30,7 +30,9 @@ class RewardItemViewHolder(itemView: View) : BaseViewHolder<RewardItem>(itemView
         with(itemView) {
             view_icon.setImageResource(item.iconRes)
             view_title.text = item.title
-            view_subtitle.text = "${item.requestedPoints}"
+            view_subtitle_1.text =
+                context.getString(R.string.requested_points, item.requestedPoints)
+            view_subtitle_2.text = context.getString(R.string.minimum_bowls, item.minimumBowls)
         }
     }
 }

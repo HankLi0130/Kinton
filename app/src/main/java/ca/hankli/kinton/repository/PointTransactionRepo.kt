@@ -11,7 +11,8 @@ class PointTransactionRepo {
         val pointTransaction = PointTransaction(
             LocalDate.now(),
             description,
-            points,
+            "Church",
+            withdrawal = points,
             balance = (getCurrentBalance() - points)
         )
         pointTransactions.add(pointTransaction)
@@ -21,6 +22,7 @@ class PointTransactionRepo {
         val pointTransaction = PointTransaction(
             LocalDate.now(),
             description,
+            "Church",
             deposit = points,
             balance = (getCurrentBalance() + points)
         )
