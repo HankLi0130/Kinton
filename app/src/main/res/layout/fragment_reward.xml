@@ -20,6 +20,7 @@
             android:layout_marginEnd="@dimen/margin_size_12" />
 
         <include
+            android:id="@+id/view_user_info"
             layout="@layout/card_eaten_bowls"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -63,6 +63,10 @@ class RewardFragment : BaseFragment(R.layout.fragment_reward, true, R.menu.socia
             view_points.text = getString(R.string.total_number_of_points, it.availablePoints)
         })
 
+        view_user_info.setOnClickListener {
+            println("Hello")
+        }
+
         view_reward_list.apply {
             setHasFixedSize(true)
             adapter = this@RewardFragment.adapter
